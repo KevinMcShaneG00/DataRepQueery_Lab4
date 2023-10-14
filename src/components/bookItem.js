@@ -1,13 +1,15 @@
+import { Card } from "react-bootstrap";
+
 function BookItem(props){
 
     return(
         <div>
             {/* how each book item is displayed/formated */}
-            <h3>
-                {props.myBook.title}
-            </h3>
-            <img src={props.myBook.thumbnailUrl}></img>
-            <p>{props.myBook.authors[0]}</p>
+            <Card style={{ width: '18rem' }}>
+                <Card.Title>{props.myBook.title}</Card.Title>
+                <Card.Img src={props.myBook.thumbnailUrl}></Card.Img>
+                <Card.Text>{props.myBook.authors[0]}</Card.Text>
+            </Card>
         </div>
     );
 
