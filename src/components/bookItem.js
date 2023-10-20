@@ -5,10 +5,16 @@ function BookItem(props){
     return(
         <div>
             {/* how each book item is displayed/formated */}
-            <Card style={{ width: '18rem' }}>
-                <Card.Title>{props.myBook.title}</Card.Title>
-                <Card.Img src={props.myBook.thumbnailUrl}></Card.Img>
-                <Card.Text>{props.myBook.authors[0]}</Card.Text>
+            <Card>
+                <Card.Header>{props.myBook.title}</Card.Header>
+                <Card.Body>
+                    <blockquote className="blockquote mb-0">
+                        <img src={props.myBook.thumbnailUrl}></img>
+                        <footer>
+                            {props.myBook.authors[0]}
+                        </footer>
+                    </blockquote>
+                </Card.Body>
             </Card>
         </div>
     );
